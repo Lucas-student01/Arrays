@@ -24,11 +24,11 @@ function reiniciarInput() {
 function Apagar() {
     limpartela()
     let indexNum = listaNum.indexOf(Number(EleValor.value))
-    if (indexNum > -1) {
-        listaNum.splice(indexNum, 1)
-        mostrandoLista(listaNum)
-    } else if (EleValor.value == '') {
+    if (EleValor.value == '') {
         listaNum.splice(-1, 1)
+        mostrandoLista(listaNum)
+    } else if (indexNum > -1) {
+        listaNum.splice(indexNum, 1)
         mostrandoLista(listaNum)
     } else {
         mostrandoLista(listaNum)
