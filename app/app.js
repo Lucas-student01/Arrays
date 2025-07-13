@@ -15,7 +15,7 @@ function adicionar() {
         criandobotao("#htmlInput", "botaoApagar", "Apagar", "Apagar()")
         reiniciarInput()
     } else {
-        
+        altereandoResultado("Por favor digite um número entre 0 e 10!")
     }
 }
 function isaNumber(number){
