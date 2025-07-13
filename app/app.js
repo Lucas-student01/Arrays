@@ -9,13 +9,21 @@ EleValor.addEventListener("keydown", function (event) {
 function adicionar() {
     limpartela()
 
-    if (EleValor.value == "" || EleValor.value < 0 || EleValor.value > 10) {
-        return altereandoResultado("Por favor digite um numero entre 0 e 10!")
+    if (isaNumber(EleValor.value)){
+        listaNum.push(Number(EleValor.value))
+        mostrandoLista(listaNum)
+        criandobotao("#htmlInput", "botaoApagar", "Apagar", "Apagar()")
+        reiniciarInput()
+    } else {
+        
     }
-    listaNum.push(Number(EleValor.value))
-    mostrandoLista(listaNum)
-    criandobotao("#htmlInput", "botaoApagar", "Apagar", "Apagar()")
-    reiniciarInput()
+}
+function isaNumber(number){
+    if (number == "" || number < 0 || number > 10){
+        return false
+    } else {
+        return true
+    }
 }
 function reiniciarInput() {
     EleValor.value = ''
